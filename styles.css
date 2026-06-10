@@ -1,0 +1,67 @@
+table {
+  text-align: center;
+  border-collapse: collapse;
+  border: 0;
+}
+
+tr[class="read"] {
+  background-image: linear-gradient(#c4dbc4, #7be07b);
+}
+
+tr[class="to-read"] {
+  background-image: linear-gradient(#c4b1b1, #cd6c6c);
+}
+
+tr[class="in-progress"] {
+  background-image: linear-gradient(#dadab9, #dada4c);
+}
+
+span {
+  display: inline-block;
+}
+
+tr[class="read"] span[class="status"] {
+  border: 2px solid #207320;
+  border-radius: 10px;
+  background-image: linear-gradient(#2fa92f, #2fa930);
+}
+
+tr[class="in-progress"] span[class="status"] {
+  border: 2px solid #93931d;
+  border-radius: 10px;
+  background-image: linear-gradient(#d9d92a, #d9d92b);
+}
+
+tr[class="to-read"] span[class="status"] {
+  border: 2px solid #841a1a;
+  border-radius: 10px;
+  background-image: linear-gradient(#c92929, #c9292a);
+}
+
+span[class="status"], span[class^="rate"] {
+  height: 1.5em;
+  width: 100px;
+  padding: 0.1em 0.5em;
+}
+
+span[class^="rate"] > span {
+  border: 1px solid black;
+  border-radius: 50%;
+  background-color: lightgray;
+  margin: 2px;
+  height: 15px;
+  width: 15px;
+}
+
+span[class~="one"] :first-child {
+  background-image: linear-gradient(#7070dc, #4141db);
+}
+
+span[class~="two"] :nth-child(1),
+span[class~="two"] :nth-child(2) {
+  background-image: linear-gradient(#7070dc, #4141db);
+}
+
+span[class~="three"] span {
+  background-image: linear-gradient(#7070dc, #4141db);
+}
